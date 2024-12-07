@@ -4,202 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About EPCST</title>
-
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            /* border: 1px solid red; */
-        }
-
-        body{
-            color: #006400;
-            
-        }
-
-        /* header start */
-        .header{
-            background-color: #f5f5f5;
-            display:flex;
-            justify-content: space-between;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+<link rel="stylesheet" href="../css/about.css">
 
 
-        .logo{
-            height: 58px;
-            width: 62px;
-            margin: 7px;
-            margin-left: 26px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            
-        }
-
-        .logoftname{
-            display: flex;
-        }
-        .name{
-            display:flex;
-            flex-direction: column;
-            margin-top:20px;
-            padding-top: 6px;
-            font-weight: bold;
-        }
-
-        .nav{
-            display: flex;
-            gap: .5rem;
-            margin-right: 26px;
-        }
-
-        .nav a{
-            text-decoration: none;
-            color: #006400;
-            margin-top: 10px;
-            padding-top: 1.5rem;
-            padding-left: 18px;
-            padding-right: 18px;
-            font-weight: bold;
-        }
-
-        .button{
-            display: flex;
-            align-items: center;
-        }
-
-        .login{
-            background-color: #69b800;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 20px;
-            border: none;
-            text-align: center;
-        }
-
-         /* header end */
-
-        .banner{
-            background-image:url('../img/ce34cb1a-cdf4-4d1c-afde-707578b3538c.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-blend-mode: overlay;
-            opacity: 100%;
-            height: 50px;
-            background-position: 45% 50%;
-        }
-
-        .banner::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(105, 184, 0, .9);
-            pointer-events: none;
-            margin-top:82px;
-            height:50px;
-        }
-
-        .line{
-            background-color: #7cd902;
-            height: 1px;
-        }
-
-        .mission{
-            background-color: #69b800;
-            clip-path: polygon(0% 0%, 65% 0%, 55% 20%, 50% 24%, 45% 55%, 40% 80%, 30% 100%, 0% 100%);
-            height: 350px;
-            color: white;
-            padding-left: 5rem;
-            padding-top: 3rem;
-        }
-
-        .misvis{
-            position: relative;
-            
-        }
-
-        .vision{
-            position:absolute;
-            top: 50px;
-            left: 870px;
-          
-        }
-
-        .history{
-            padding-left: 5rem;
-            padding-right:5rem;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            
-        }
-
-        .historyarea{
-            display:flex;
-            padding-top: 1rem;
-        }
-
-        .historyarea img{
-            height:100px;
-            width:100px;
-            float: right;
-        }
-
-        .philoarea img{
-            height:200px;
-            width: 200px;
-        }
-
-        .philoarea{
-            display: flex;
-            padding-top: 1rem;
-        }
-
-        .philo{
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            padding-left: 5rem;
-            padding-right: 5rem;
-        }
-
-        .philotitle{
-            text-align: center;
-        }
-
-        .facibanner{
-            background-color: #69b800;
-            color: white;
-            height: 50px;
-            text-align: center;
-            padding-top: 20px;
-        }
-
-
-
-        
-
-    </style>
 </head>
 <body>
     <div class="header">
-        <div class="logoftname">
-            <img src="../img/logo_plain.png" class="logo" alt="">
-            
-            <div class="name">
-            <p>EASTWOODS PROFESSIONAL COLLEGE</p>
-            <p> Of Science and Technology</p>
-            </div>
-        </div>
+        <a href="{{ route('welcome') }}" class="logoftname">
+                <img src="../img/logo_plain.png" class="logo" alt="">
+                
+                <div class="name">
+                <p>EASTWOODS PROFESSIONAL COLLEGE</p>
+                <p> Of Science and Technology</p>
+                </div>
+        </a>
         <div class="nav">
-            <a href="">Home</a>
-            <a href="">About EPCST</a>
-            <a href="">Programs</a>
-            <a href="">Admissions</a>
-            <a href="">Linkages</a>
-            <a href="">Contact Us</a>
+            <a href="{{ route('homepage') }}" id="home">Home</a>
+            <a href="{{ route('about') }}" id="about">About EPCST</a>
+            <a href="{{ route('programs') }}" id="programs">Programs</a>
+            <a href="{{ route('admissions') }}" id="ad">Admissions</a>
+            <a href="{{ route('linkages') }}" id="linkages">Linkages</a>
+            <a href="{{ route('contact') }}" id="contact">Contact Us</a>
             <div class="button">
-            <button class="login">LOGIN</button>
+                <a href="{{ route('login') }}" class="login">LOGIN</a>
             </div>
         </div>
     </div>
@@ -224,11 +54,11 @@
         <div class="misvis">
             <div class="mission">
                 <h1 class="mistitle">OUR MISSION</h1>
-                <p>mission here</p>
+                <p>To develop and offer high quality technical, health and higher education programs that would ensure employability and productivity of young men and women through proper values and principles as a means to achieve success with excellence for better quality of life..</p>
             </div>
             <div class="vision">
                 <h1 class="vistitle">OUR VISION</h1>
-                <p>vision here</p>
+                <p>To develop and offer high quality technical, health and higher education programs that would ensure employability and productivity of young men and women through proper values and principles as a means to achieve success with excellence for better quality of life..</p>
             </div>
         </div>
 
@@ -236,19 +66,36 @@
             <h1 class="philotitle">OUR PHILOSOPHY</h1>
             <div class="philoarea">
                 <img src="../img/5776927.png" alt="">
-                <p>philo here</p>
+                <p>The paramount role of Eastwoods Professional College of Science and Technology is to guide the studentry, through education and training, building foundation of knowledge, skills and moral values necessary in the attainment of their potential, for them to be competitive, proactive and proud citizens of our country.</p>
             </div>
         </div>
         
         <div class="facilities">
-            <div class="facibanner">
-                <h2>CAMPUS FACILITIES</h2>
-            </div>
+                <div class="facibanner">
+                    <h2>CAMPUS FACILITIES</h2>
+                </div>
 
-            <div class="faciarea">
-                
-            </div>
-        </div>
-    
+                <div class="faciarea">
+
+
+                <div class="gallery js-flickity"
+                    data-flickity-options='{ "wrapAround": true }'>
+                    <div class="gallery-cell"><img src="../img/nb-out.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 2 at Roman Superhighway, Balanga</span></div>
+                    <div class="gallery-cell"><img src="../img/nb-lobby.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 2 - Lobby</span></div>
+                    <div class="gallery-cell"><img src="../img/nb-roof.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 2 - Rooftop Bar</span></div>
+                    <div class="gallery-cell"><img src="../img/nb-saso.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 2 - SASO Office</span></div>
+                    <div class="gallery-cell"><img src="../img/nb-admin.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 2 - Administration Office</span></div>
+                    <div class="gallery-cell"><img src="../img/SC_IMG.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 1 at Ibayo, Balanga, Bataan</span></div>
+                    <div class="gallery-cell"><img src="../img/GOPR0392.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 1 - Computer Laboratory</span></div>
+                    <div class="gallery-cell"><img src="../img/GOPR0451.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 1 - Classroom</span></div>
+                    <div class="gallery-cell"><img src="../img/GOPR0458.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 1 - Kitchen Laboratory</span></div>
+                    <div class="gallery-cell"><img src="../img/GOPR0508.jpg" height="100%" width="100%" object-fit="cover" alt=""><span class="carouseltitle">Building 1 - Hotel Something</span></div>
+
+
+                    </div>
+                </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+
+<script src="../js/index.js"></script>
 </body>
 </html>
